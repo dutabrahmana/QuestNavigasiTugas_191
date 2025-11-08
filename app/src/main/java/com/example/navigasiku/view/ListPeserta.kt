@@ -166,3 +166,16 @@ fun ListPeserta(
                 }
             }
 
+            Spacer(modifier = Modifier.weight(1f))
+
+            // TOMBOL (Warna Tombol Diubah)
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Button(
+                    onClick = onBackListBtn,
+                    colors = ButtonDefaults.buttonColors(containerColor = primaryButtonColor), // WARNA BARU
+                    shape = RoundedCornerShape(8.dp),
+                    modifier = Modifier.weight(1f).height(48.dp)
+                )
