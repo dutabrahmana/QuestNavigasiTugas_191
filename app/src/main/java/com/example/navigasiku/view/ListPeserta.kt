@@ -54,4 +54,43 @@ fun ListPeserta(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-         }
+                text = stringResource(id = R.string.list_daftar_peserta),
+                style = MaterialTheme.typography.headlineMedium,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+
+            // ----------------------------------------------------
+            // CARD PERTAMA (Duta Brahmana - Data 1)
+            // ----------------------------------------------------
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(containerColor = cardBackgroundColor) // WARNA BARU
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)
+                ) {
+                    // ROW 1: Nama Lengkap vs Jenis Kelamin
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween // KUNCI KESEJAJARAN
+                    ) {
+                        // KOLOM 1 (Nama Lengkap)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(text = stringResource(id = R.string.nama_lengkap), fontSize = 14.sp, color = Color.Red, fontWeight = FontWeight.SemiBold)
+                            Text(text = stringResource(id = R.string.nama1), fontSize = 16.sp, color = Color.Blue) // Menampilkan Nama
+                        }
+                        // KOLOM 2 (Jenis Kelamin)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(text = stringResource(id = R.string.jenis_kelamin), fontSize = 14.sp, color = Color.Red, fontWeight = FontWeight.SemiBold)
+                            Text(text = stringResource(id = R.string.jk_laki), fontSize = 16.sp, color = Color.Blue
+                            )
+                        }
+                    }
+
+                  }
