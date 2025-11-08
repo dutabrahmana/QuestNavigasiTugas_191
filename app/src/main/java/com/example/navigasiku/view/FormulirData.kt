@@ -181,3 +181,42 @@ fun Formulirpendaftarann(
                             fontWeight = FontWeight.SemiBold,
                             modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
                         )
+                        Row {
+                            status.forEach { item ->
+                                Row(
+                                    modifier = Modifier.selectable(
+                                        selected = textStatus == item,
+                                        onClick = { textStatus = item }
+                                    ),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(
+                                        selected = textStatus == item,
+                                        onClick = { textStatus = item }
+                                    )
+                                    Text(item)
+                                }
+                            }
+                        }
+
+                        // 4. ALAMAT
+                        Text(
+                            text = stringResource(id = R.string.alamat),
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.SemiBold,
+                            modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
+                        )
+                        OutlinedTextField(
+                            value = textAlamat,
+                            onValueChange = { textAlamat = it },
+                            singleLine = true,
+                            placeholder = { Text("Alamat") },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
+                        Spacer(modifier = Modifier.height(30.dp)) // Padding bawah form
+
+                        // Tombol (Dipindahkan ke luar Column yang bisa discroll)
+                    }
+                }
+
