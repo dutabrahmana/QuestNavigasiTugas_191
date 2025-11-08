@@ -53,4 +53,27 @@ fun Halaman1(
             contentScale = ContentScale.Crop, // Memastikan gambar mengisi seluruh Box
             modifier = Modifier.matchParentSize() // Mengisi ukuran Box utama
         )
-       }
+        // Opsional: Overlay gelap agar teks mudah dibaca
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .background(Color.Black.copy(alpha = 0.2f))
+        )
+
+        // --- LAPISAN 2: KONTEN UTAMA ---
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 24.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            // Gambar logo di atas
+            Image(
+                painter = painterResource(id = R.drawable.img),
+                contentDescription = "Logo App",
+                modifier = Modifier
+                    .size(250.dp)
+                    .padding(bottom = 16.dp)
+            )
+
