@@ -44,5 +44,12 @@ fun Halaman1(
 ) {
     Box(
         modifier = modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center 
+        contentAlignment = Alignment.Center
     ) {
+        // --- LAPISAN 1: BACKGROUND GAMBAR ---
+        Image(
+            painter = painterResource(id = BACKGROUND_DRAWABLE_ID),
+            contentDescription = "Background",
+            contentScale = ContentScale.Crop, // Memastikan gambar mengisi seluruh Box
+            modifier = Modifier.matchParentSize() // Mengisi ukuran Box utama
+        )
