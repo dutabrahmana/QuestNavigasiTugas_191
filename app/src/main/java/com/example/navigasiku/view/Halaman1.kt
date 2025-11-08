@@ -77,3 +77,24 @@ fun Halaman1(
                     .padding(bottom = 16.dp)
             )
 
+            // Card berisi info user
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                shape = RoundedCornerShape(16.dp),
+                elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.9f))
+            ) {
+                Column(
+                    modifier = Modifier.padding(20.dp),
+                    // Pastikan konten di dalam Card juga rata tengah
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = "Halo Sobat Palembang!",
+                        fontSize = 24.sp, // Ukuran font diperbesar
+                        fontWeight = FontWeight.ExtraBold, // Bobot font dipertebal
+                        fontFamily = FontFamily.Serif, // Ganti Font Family
+                        color = Color(0xFFB97A1E)
+                    )
+
