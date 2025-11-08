@@ -55,3 +55,17 @@ fun DataApp(
                     }
                 )
             }
+
+            // Halaman Form Pendaftaran
+            composable(route = Navigasi.form.name) {
+                Formulirpendaftarann(
+                    modifier = Modifier,
+                    onBackListBtn = {
+                        // Kembali ke halaman list
+                        navController.navigate(Navigasi.list.name)
+                    }
+                )
+            }
+        }
+    }
+}
