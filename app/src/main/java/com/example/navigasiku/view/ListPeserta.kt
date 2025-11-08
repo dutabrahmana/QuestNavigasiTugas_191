@@ -123,3 +123,46 @@ fun ListPeserta(
                 shape = RoundedCornerShape(12.dp),
                 colors = CardDefaults.cardColors(containerColor = cardBackgroundColor) // WARNA BARU
             ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp)
+                ) {
+                    // ROW 1: Nama Lengkap & Jenis Kelamin
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween // KUNCI KESEJAJARAN
+                    ) {
+                        // KOLOM 1 (Nama Lengkap)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(text = stringResource(id = R.string.nama_lengkap), fontSize = 14.sp, color = Color.Blue, fontWeight = FontWeight.SemiBold)
+                            Text(text = stringResource(id = R.string.nama2), fontSize = 16.sp, color = Color.Red) // Menampilkan Nama
+                        }
+                        // KOLOM 2 (Jenis Kelamin)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(text = stringResource(id = R.string.jenis_kelamin), fontSize = 14.sp, color = Color.Blue, fontWeight = FontWeight.SemiBold)
+                            Text(text = stringResource(id = R.string.jk_laki), fontSize = 16.sp, color = Color.Red)
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    // ROW 2: Status Kawin & Alamat
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween // KUNCI KESEJAJARAN
+                    ) {
+                        // KOLOM 1 (Status Kawin)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(text = stringResource(id = R.string.status_kawin), fontSize = 14.sp, color = Color.Blue, fontWeight = FontWeight.SemiBold)
+                            Text(text = stringResource(id = R.string.status_lajang), fontSize = 16.sp, color = Color.Red)
+                        }
+                        // KOLOM 2 (Alamat)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(text = stringResource(id = R.string.alamat), fontSize = 14.sp, color = Color.Blue, fontWeight = FontWeight.SemiBold)
+                            Text(text = stringResource(id = R.string.alamat2), fontSize = 16.sp, color = Color.Red)
+                        }
+                    }
+                }
+            }
+
