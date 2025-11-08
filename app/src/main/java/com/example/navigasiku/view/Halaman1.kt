@@ -44,7 +44,7 @@ fun Halaman1(
 ) {
     Box(
         modifier = modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
+        contentAlignment = Alignment.Center // Memastikan konten utama (Column) ada di tengah
     ) {
         // --- LAPISAN 1: BACKGROUND GAMBAR ---
         Image(
@@ -53,3 +53,4 @@ fun Halaman1(
             contentScale = ContentScale.Crop, // Memastikan gambar mengisi seluruh Box
             modifier = Modifier.matchParentSize() // Mengisi ukuran Box utama
         )
+       }
