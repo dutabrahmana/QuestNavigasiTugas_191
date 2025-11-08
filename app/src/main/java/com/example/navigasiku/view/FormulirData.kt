@@ -289,3 +289,23 @@ fun Formulirpendaftarann(
                                 fontWeight = FontWeight.SemiBold
                             )
                             Text(text = ": $textJK")
+                        }
+                        Row {
+                            Text(
+                                text = stringResource(id = R.string.status_kawin),
+                                modifier = Modifier.width(120.dp),
+                                fontWeight = FontWeight.SemiBold
+                            )
+                            Text(text = ": $textStatus")
+                        }
+                        Row {
+                            Text(
+                                text = stringResource(id = R.string.alamat),
+                                modifier = Modifier.width(120.dp),
+                                fontWeight = FontWeight.SemiBold
+                            )
+                            Text(text = ": $textAlamat")
+                        }
+                    }
+
+                },
