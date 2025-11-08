@@ -131,4 +131,53 @@ fun Formulirpendaftarann(
                             .verticalScroll(rememberScrollState()), // Scroll untuk form panjang
                         horizontalAlignment = Alignment.Start
                     ) {
-                   }
+                        // 1. NAMA LENGKAP
+                        Text(
+                            text = stringResource(id = R.string.nama_lengkap),
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.SemiBold,
+                            modifier = Modifier.padding(bottom = 8.dp)
+                        )
+                        OutlinedTextField(
+                            value = textNama,
+                            onValueChange = { textNama = it },
+                            singleLine = true,
+                            placeholder = { Text("Isian Nama Lengkap") },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
+                        // 2. JENIS KELAMIN
+                        Text(
+                            text = stringResource(id = R.string.jenis_kelamin),
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.SemiBold,
+                            modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
+                        )
+                        Row(
+                            horizontalArrangement = Arrangement.spacedBy(16.dp),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            gender.forEach { item ->
+                                Row(
+                                    modifier = Modifier.selectable(
+                                        selected = textJK == item,
+                                        onClick = { textJK = item }
+                                    ),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    RadioButton(
+                                        selected = textJK == item,
+                                        onClick = { textJK = item }
+                                    )
+                                    Text(item)
+                                }
+                            }
+                        }
+
+                        // 3. STATUS PERKAWINAN
+                        Text(
+                            text = stringResource(id = R.string.status_kawin),
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontWeight = FontWeight.SemiBold,
+                            modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
+                        )
