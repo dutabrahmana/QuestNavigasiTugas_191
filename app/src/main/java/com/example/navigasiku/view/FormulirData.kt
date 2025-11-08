@@ -259,3 +259,16 @@ fun Formulirpendaftarann(
                 }
             }
         }
+
+        // --- ALERT DIALOG ---
+        if (showDialog) {
+            AlertDialog(
+                onDismissRequest = { showDialog = false },
+                title = {
+                    Text(
+                        text = stringResource(id = R.string.data),
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.SansSerif
+                    )
+                },
+                text = {
