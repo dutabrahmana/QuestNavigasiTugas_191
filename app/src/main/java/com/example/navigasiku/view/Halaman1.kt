@@ -98,3 +98,24 @@ fun Halaman1(
                         color = Color(0xFFB97A1E)
                     )
 
+                    Spacer(modifier = Modifier.height(8.dp)) // Spacer tambahan
+
+                    Text(
+                        text = "SRIWIJAYA FC",
+                        fontSize = 20.sp,
+                        color = Color.Black, // Warna lebih gelap
+                        textAlign = TextAlign.Center, // Tambahkan rata tengah
+                        modifier = Modifier.padding(horizontal = 4.dp) // Tambahkan padding horizontal agar tidak terlalu lebar
+                    )
+
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    Text(
+                        text = "SELAMAT BERGABUNG Laskar Wong Kito",
+                        fontSize = 16.sp,
+                        fontStyle = FontStyle.Italic,
+                        textAlign = TextAlign.Center,
+                        color = Color(0xFFFF9800)
+                    )
+                }
+            }
