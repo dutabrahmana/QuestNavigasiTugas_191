@@ -75,3 +75,60 @@ fun Formulirpendaftarann(
     val status = listOf(stringResource(id = R.string.status_kawin_janda), stringResource(id = R.string.status_lajang), stringResource(id = R.string.status_kawin_duda))
 
 
+    Scaffold(
+        modifier = modifier.fillMaxSize()
+    ) { innerPadding ->
+
+
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+            // LAPISAN 1: BACKGROUND GAMBAR
+            Image(
+                painter = painterResource(id = BACKGROUND_IMAGE_ID),
+                contentDescription = "Background Formulir",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.matchParentSize()
+            )
+
+            // Opsional: Overlay agar konten lebih mudah dibaca
+            Box(
+                modifier = Modifier
+                    .matchParentSize()
+                    .background(Color.Black.copy(alpha = 0.4f))
+            )
+
+            // LAPISAN 2: KONTEN FORMULIR (COLUMN UTAMA)
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(horizontal = 2.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                // Judul Formulir
+                Text(
+                    text = stringResource(id = R.string.halaman_formulir),
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White, // Teks putih agar kontras dengan background gelap
+                    modifier = Modifier.padding(bottom = 16.dp, top = 16.dp)
+                )
+
+                // CARD WADAH FORMULIR
+                Card(
+                    elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f) // Mengambil sisa ruang di atas tombol
+                        .padding(horizontal = 16.dp)
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .padding(20.dp)
+                            .verticalScroll(rememberScrollState()), // Scroll untuk form panjang
+                        horizontalAlignment = Alignment.Start
+                    ) {
+                   }
