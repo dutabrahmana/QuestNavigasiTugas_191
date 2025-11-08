@@ -119,3 +119,25 @@ fun Halaman1(
                     )
                 }
             }
+
+            Spacer(modifier = Modifier.height(40.dp))
+
+            // Tombol masuk
+            Button(
+                onClick = onMasukClick,
+                modifier = Modifier
+                    .fillMaxWidth(0.8f)
+                    .height(50.dp),
+                shape = RoundedCornerShape(12.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF020202))
+            ) {
+                Text(
+                    text = stringResource(id = R.string.masuk),
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = Color.White
+                )
+            }
+        }
+    }
+}
