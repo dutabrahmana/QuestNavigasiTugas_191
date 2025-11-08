@@ -178,4 +178,19 @@ fun ListPeserta(
                     colors = ButtonDefaults.buttonColors(containerColor = primaryButtonColor), // WARNA BARU
                     shape = RoundedCornerShape(8.dp),
                     modifier = Modifier.weight(1f).height(48.dp)
-                )
+                ) {
+                    Text(text = stringResource(id = R.string._back), color = Color.Black, fontWeight = FontWeight.Medium)
+                }
+
+                Button(
+                    onClick = onNextListBtn,
+                    colors = ButtonDefaults.buttonColors(containerColor = primaryButtonColor), // WARNA BARU
+                    shape = RoundedCornerShape(8.dp),
+                    modifier = Modifier.weight(1f).height(48.dp)
+                ) {
+                    Text(text = stringResource(id = R.string.formulir), color = Color.Black, fontWeight = FontWeight.Medium)
+                }
+            }
+        }
+    }
+}
