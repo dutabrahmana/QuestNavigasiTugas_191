@@ -37,4 +37,7 @@ import com.example.navigasiku.R
 
 private val BACKGROUND_DRAWABLE_ID = R.drawable.img_1
 
+@Composable
+fun Halaman1(
+    modifier: Modifier = Modifier,
     onMasukClick: () -> Unit
