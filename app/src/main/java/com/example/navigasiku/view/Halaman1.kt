@@ -41,3 +41,8 @@ private val BACKGROUND_DRAWABLE_ID = R.drawable.img_1
 fun Halaman1(
     modifier: Modifier = Modifier,
     onMasukClick: () -> Unit
+) {
+    Box(
+        modifier = modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center 
+    ) {
