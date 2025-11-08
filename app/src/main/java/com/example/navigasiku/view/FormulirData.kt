@@ -220,3 +220,42 @@ fun Formulirpendaftarann(
                     }
                 }
 
+                // TOMBOL (DITEMPATKAN DI LUAR CARD AGAR SELALU TERLIHAT)
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp)
+                        .padding(top = 16.dp, bottom = 16.dp)
+                ) {
+                    Button(
+                        onClick = onBackListBtn,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFFF44336) // Abu-abu gelap untuk Kembali
+                        ),
+                        shape = RoundedCornerShape(8.dp),
+                        modifier = Modifier.weight(1f).height(48.dp)
+                    ) {
+                        Text(text = stringResource(id = R.string._back), color = Color.White, fontWeight = FontWeight.Medium)
+                    }
+
+                    Button(
+                        onClick = {
+                            // Simpan data dan tampilkan dialog
+                            nama = textNama
+                            alamat = textAlamat
+                            jenisKelamin = textJK
+                            statusPerkawinan = textStatus
+                            showDialog = true
+                        },
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFF007BFF) // Biru terang untuk Submit
+                        ),
+                        shape = RoundedCornerShape(8.dp),
+                        modifier = Modifier.weight(1f).height(48.dp)
+                    ) {
+                        Text(text = stringResource(id = R.string.submit), color = Color.White, fontWeight = FontWeight.Medium)
+                    }
+                }
+            }
+        }
