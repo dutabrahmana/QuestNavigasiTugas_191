@@ -1,3 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">NavigasiKu</string>
+
+    <string name="list_daftar_peserta">Daftar Peserta</string>
+    <string name="halaman_beranda">Halaman Beranda</string>
+    <string name="halaman_formulir">Input Formulir</string>
+    <string name="halaman_detail">Detail Data</string>
+
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="status_kawin">Status Perkawinan</string>
+    <string name="alamat">Alamat</string>
+
+    <string name="jk_laki">Laki-laki</string>
+    <string name="jk_perempuan">Perempuan</string>
+    <string name="status_lajang">Lajang</string>
+    <string name="status_kawin_duda">Duda</string>
+    <string name="status_kawin_janda">Janda</string>
+
+
+    <string name="submit">Submit</string>
+    <string name="beranda">Beranda</string>
+    <string name="formulir">Formulir</string>
+    <string name="masuk">Masuk</string>
+    <string name="tampil">Tampilkan Detail</string>
+    <string name="_back">Kembali</string>
+    <string name="alamat1">Palembang</string>
+    <string name="alamat2">Lubuk linggau</string>
+    <string name="nama1">Duta Brahmana</string>
+    <string name="nama2">Andara Fitra Hamura</string>
+    <string name="data">Data berhasil di input</string>
+
 </resources>
