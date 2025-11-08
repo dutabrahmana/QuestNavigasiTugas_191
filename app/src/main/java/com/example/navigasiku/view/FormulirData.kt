@@ -309,3 +309,17 @@ fun Formulirpendaftarann(
                     }
 
                 },
+                confirmButton = {
+                    Button(
+                        onClick = { showDialog = false },
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFFE91E63) // Purple
+                        )
+                    ) {
+                        Text("OK", color = Color.White)
+                    }
+                }
+            )
+        }
+    }
+}
