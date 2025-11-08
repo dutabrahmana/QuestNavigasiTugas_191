@@ -272,3 +272,20 @@ fun Formulirpendaftarann(
                     )
                 },
                 text = {
+                    Column {
+                        // Tampilan Detail Data di Dialog
+                        Row {
+                            Text(
+                                text = stringResource(id = R.string.nama_lengkap),
+                                modifier = Modifier.width(120.dp),
+                                fontWeight = FontWeight.SemiBold
+                            )
+                            Text(text = ": $textNama")
+                        }
+                        Row {
+                            Text(
+                                text = stringResource(id = R.string.jenis_kelamin),
+                                modifier = Modifier.width(120.dp),
+                                fontWeight = FontWeight.SemiBold
+                            )
+                            Text(text = ": $textJK")
