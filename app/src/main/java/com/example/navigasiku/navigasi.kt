@@ -32,3 +32,12 @@ fun DataApp(
         ) {
 
 
+            composable(route = Navigasi.home.name) {
+                Halaman1(
+                    modifier = Modifier,
+                    onMasukClick = {
+                        navController.navigate(Navigasi.list.name)
+                    }
+                )
+            }
+
