@@ -93,4 +93,33 @@ fun ListPeserta(
                         }
                     }
 
-                  }
+                    Spacer(modifier = Modifier.height(12.dp)) // Pemisah antar baris
+
+                    // ROW 2: Status Kawin vs Alamat
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween // KUNCI KESEJAJARAN
+                    ) {
+                        // KOLOM 1 (Status Kawin)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(text = stringResource(id = R.string.status_kawin), fontSize = 14.sp, color = Color.Red, fontWeight = FontWeight.SemiBold)
+                            Text(text = stringResource(id = R.string.status_lajang), fontSize = 16.sp, color = Color.Blue)
+                        }
+                        // KOLOM 2 (Alamat)
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(text = stringResource(id = R.string.alamat), fontSize = 14.sp, color = Color.Red, fontWeight = FontWeight.SemiBold)
+                            Text(text = stringResource(id = R.string.alamat1), fontSize = 16.sp, color = Color.Blue)
+                        }
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(20.dp))
+            // ----------------------------------------------------
+            // CARD KEDUA (Andara Fitra Hamura - Data 2)
+            // ----------------------------------------------------
+            Card(
+                modifier = modifier.fillMaxWidth(),
+                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(containerColor = cardBackgroundColor) // WARNA BARU
+            ) {
